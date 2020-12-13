@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 12/12/2020, 10:31:13 PM
-    Author     : Omar
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
