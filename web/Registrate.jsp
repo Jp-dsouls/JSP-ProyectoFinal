@@ -19,19 +19,19 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <div class="container">
-                    <a class="navbar-brand" href="index.jsp">INICIO</a>
+                    <a class="navbar-brand" href="index.xhtml">INICIO</a>
                     <ul class="navbar-nav mr-auto">    
                         <li class="nav-item">
-                            <a class="nav-link" href="Series.jsp">Series</a>
+                            <a class="nav-link" href="Series.xhtml">Series</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="logueo.jsp">Login</a>
+                             <a class="nav-link" href="logueo.xhtml">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Registrate.jsp">Registrate</a>
+                            <a class="nav-link" href="Registrate.xhtml">Registrate</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="tabla.jsp">Suscribete</a>
+                             <a class="nav-link" href="tabla.xhtml">Suscribete</a>
                         </li>
                     </ul>
             </nav>
