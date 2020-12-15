@@ -3,11 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
      <head>
-         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"></link>
         <a href="Series.html"></a>
-    <link rel="stylesheet" href="css/miestilo_registrate.css"></link>
+        <link rel="stylesheet" href="css/login.css"></link>
+        <link rel="stylesheet" href="css/miestilo.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <title>Página de Series</title>
     </head>
     <body>
@@ -30,15 +32,12 @@
             </nav>
         </header>
         
-        <form action="Control" class="form" id="form">
-            <h1 id="letra">INGRESANDO</h1>
-            <label>Usurname</label>
-            <input type="text" name="txtPersona" value="" />
-             <label>Contraseña</label>
-             <input type="password" name="txtContrasena" value="" /><br></br>
-             <input type="submit" value="Ingresar" name="accion" />
+        <form action="Control" class="form-box animate__animated animate__fadeInDown">
+            <h6 class="form-title">SingIn</h6>    
+            <input type="text" name="txtPersona" placeholder="Username"></input>
+            <input type="password" placeholder="Password"></input>
+            <button type="submit" name="accion">Login</button> 
         </form>
-    
     </body>
 </html>
 
