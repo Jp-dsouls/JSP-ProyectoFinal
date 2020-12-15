@@ -60,3 +60,10 @@ body{
 .form-box button[type="submit"]:hover{
     background: none;
 }
+
+.form-box .lista-desplegable{
+    width: 100%;
+    font-size: 20px;
+    background: #24303c;
+    color: #fff;
+}
