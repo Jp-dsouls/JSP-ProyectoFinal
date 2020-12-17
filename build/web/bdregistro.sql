@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-10-2020 a las 17:43:33
+-- Tiempo de generación: 17-12-2020 a las 01:54:05
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -51,6 +51,30 @@ INSERT INTO `busqueda` (`codusu`, `codgen`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `compra`
+--
+
+CREATE TABLE `compra` (
+  `nrocom` int(10) NOT NULL,
+  `codusu` int(10) NOT NULL,
+  `codpaq` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cuenta`
+--
+
+CREATE TABLE `cuenta` (
+  `codcue` int(10) NOT NULL,
+  `salcue` decimal(8,2) NOT NULL,
+  `codusu` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `datosdeusuario`
 --
 
@@ -73,8 +97,7 @@ INSERT INTO `datosdeusuario` (`codusu`, `nomusu`, `apeusu`, `telusu`, `corusu`, 
 (2, 'Junior', 'Pezantes', 952538425, 'junior@gmail.com', 22, 'animes'),
 (5, 'Sharon', 'Hurtado', 999444666, 'sharon@gmail.com', 21, 'comedia'),
 (7, 'Nilo', 'Villegas', 988848722, 'nilo@hotmail.com', 19, 'accion'),
-(8, 'Ronald', 'Ramos', 555555555, 'ronald@gmail.com', 31, 'medica'),
-(10, 'Roman', 'Villegas', 987456321, 'roman@gmail.com', 25, 'Thriller');
+(10, 'Roman', 'Chzavez', 987456321, 'roman@gmail.com', 25, 'Thriller');
 
 -- --------------------------------------------------------
 
@@ -111,6 +134,18 @@ INSERT INTO `generosdeserie` (`codgen`, `nomgen`, `sergen`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `paquetes`
+--
+
+CREATE TABLE `paquetes` (
+  `codpaq` int(10) NOT NULL,
+  `nompaq` varchar(30) NOT NULL,
+  `cospaq` decimal(8,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `personas`
 --
 
@@ -142,6 +177,21 @@ ALTER TABLE `busqueda`
   ADD KEY `codgen` (`codgen`);
 
 --
+-- Indices de la tabla `compra`
+--
+ALTER TABLE `compra`
+  ADD PRIMARY KEY (`nrocom`),
+  ADD KEY `codusu` (`codusu`),
+  ADD KEY `codpaq` (`codpaq`);
+
+--
+-- Indices de la tabla `cuenta`
+--
+ALTER TABLE `cuenta`
+  ADD PRIMARY KEY (`codcue`),
+  ADD KEY `codusu` (`codusu`);
+
+--
 -- Indices de la tabla `datosdeusuario`
 --
 ALTER TABLE `datosdeusuario`
@@ -152,6 +202,12 @@ ALTER TABLE `datosdeusuario`
 --
 ALTER TABLE `generosdeserie`
   ADD PRIMARY KEY (`codgen`);
+
+--
+-- Indices de la tabla `paquetes`
+--
+ALTER TABLE `paquetes`
+  ADD PRIMARY KEY (`codpaq`);
 
 --
 -- Indices de la tabla `personas`
@@ -179,6 +235,19 @@ ALTER TABLE `personas`
 ALTER TABLE `busqueda`
   ADD CONSTRAINT `busqueda_ibfk_1` FOREIGN KEY (`codusu`) REFERENCES `datosdeusuario` (`codusu`),
   ADD CONSTRAINT `busqueda_ibfk_2` FOREIGN KEY (`codgen`) REFERENCES `generosdeserie` (`codgen`);
+
+--
+-- Filtros para la tabla `compra`
+--
+ALTER TABLE `compra`
+  ADD CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`codusu`) REFERENCES `datosdeusuario` (`codusu`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compra_ibfk_2` FOREIGN KEY (`codpaq`) REFERENCES `paquetes` (`codpaq`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `cuenta`
+--
+ALTER TABLE `cuenta`
+  ADD CONSTRAINT `cuenta_ibfk_1` FOREIGN KEY (`codusu`) REFERENCES `datosdeusuario` (`codusu`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
