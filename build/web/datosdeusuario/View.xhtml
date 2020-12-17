@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewDatosdeusuarioTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_codusu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.codusu}" title="#{bundle.ViewDatosdeusuarioTitle_codusu}"/>
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_nomusu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.nomusu}" title="#{bundle.ViewDatosdeusuarioTitle_nomusu}"/>
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_apeusu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.apeusu}" title="#{bundle.ViewDatosdeusuarioTitle_apeusu}"/>
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_telusu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.telusu}" title="#{bundle.ViewDatosdeusuarioTitle_telusu}"/>
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_corusu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.corusu}" title="#{bundle.ViewDatosdeusuarioTitle_corusu}"/>
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_edausu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.edausu}" title="#{bundle.ViewDatosdeusuarioTitle_edausu}"/>
+                    <h:outputText value="#{bundle.ViewDatosdeusuarioLabel_conusu}"/>
+                    <h:outputText value="#{datosdeusuarioController.selected.conusu}" title="#{bundle.ViewDatosdeusuarioTitle_conusu}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{datosdeusuarioController.destroyAndView}" value="#{bundle.ViewDatosdeusuarioDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewDatosdeusuarioEditLink}"/>
+                <br />
+                <h:commandLink action="#{datosdeusuarioController.prepareCreate}" value="#{bundle.ViewDatosdeusuarioCreateLink}" />
+                <br />
+                <h:commandLink action="#{datosdeusuarioController.prepareList}" value="#{bundle.ViewDatosdeusuarioShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewDatosdeusuarioIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
