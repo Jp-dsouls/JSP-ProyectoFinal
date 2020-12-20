@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ProyectoFinal/web/Registrate.xhtml</file>
-            <file>file:/C:/xampp/htdocs/ProyectoFinal/web/index.xhtml</file>
+            <file>file:/C:/Users/Acer/Documents/GitHub/JSP-ProyectoFinal/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Users/Acer/Documents/GitHub/JSP-ProyectoFinal/web/index.xhtml</file>
+            <file>file:/C:/Users/Acer/Documents/GitHub/JSP-ProyectoFinal/web/inicio.xhtml</file>
+            <file>file:/C:/Users/Acer/Documents/GitHub/JSP-ProyectoFinal/src/java/config/Conexion.java</file>
+            <file>file:/C:/Users/Acer/Documents/GitHub/JSP-ProyectoFinal/src/java/modelo/Generosdeserie.java</file>
+            <file>file:/C:/Users/Acer/Documents/GitHub/JSP-ProyectoFinal/src/java/modelo/Compra.java</file>
         </group>
     </open-files>
 </project-private>
