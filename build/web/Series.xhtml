@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Página de Series</title>
         <meta charset="UTF-8"></meta>
@@ -53,8 +54,18 @@
                                 <a class="dropdown-item" href="#nine">Thriller</a>
                             </div>
                         </li>
-                    </ul>
+                    </ul>                    
                 </div>
+                <h:form id="formLenguaje">
+                            <div style="float: right">
+                                <h:outputText value="Idioma"/>
+                                <h:selectOneMenu value="#{bundle_index_es.card0}">
+                                    <f:selectItem itemLabel="Español" itemValue="es"/>
+                                    <f:selectItem itemLabel="Ingles" itemValue="en"/>
+                                    <f:selectItem itemLabel="Frances" itemValue="fr"/>
+                                </h:selectOneMenu>
+                            </div>
+                        </h:form>
             </nav>
         </header>  <br/>
 
@@ -67,7 +78,9 @@
                     <img src="img/imagen11.jpg" class="img-fluid card-img-top" alt="..."></img>
                     <div class="card-body">
                         <h2 class="card-title">The Titans</h2>
-                        <p class="card-text"> Dick Grayson y Rachel Roth, una joven especial poseída por una extraña oscuridad, se enredan en una conspiración que podría traer el Infierno sobre la Tierra. Uniéndose a ellos en el camino están Starfire y el adorable Bestia Boy. Juntos se convierten en una familia sustituta y un equipo de héroes..</p><br/>
+                        <p class="card-text"> 
+                            <h:outputText value="#{bundle_series.text0}"></h:outputText> 
+                        </p><br/>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"></li>
                             <li class="list-group-item">2 Temporadas - 24 Episodios </li>
@@ -82,7 +95,9 @@
                     <img src="img/imagen12.jpg" class="img-fluid card-img-top" alt="..."></img>
                     <div class="card-body">
                         <h2 id="Tb" class="card-title">The Boys</h2>
-                        <p class="card-text">¿Qué pasa cuando los superhéroes abusan de sus superpoderes en lugar de utilizarlos para hacer el bien? The Boys es la adaptación televisiva de la obra de Garth Ennis que presenta un mundo superheróico donde los héroes están corrompidos por la fama. Esta actitud cegada y de alta celebridad les lleva a poner en peligro al mundo más de una vez. </p>
+                        <p class="card-text">
+                            <h:outputText value="#{bundle_series.text1}"></h:outputText> 
+                        </p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"></li>
                             <li class="list-group-item">2 Temporadas - 16 Episodios</li>
@@ -97,8 +112,9 @@
                     <img id="Tf" src="img/imagen13.jpg" class="img-fluid card-img-top" alt="..."></img>
                     <div class="card-body">
                         <h2 class="card-title">The Flash</h2>
-                        <p class="card-text">Barry Allen en un excelente investigador, algo que aprovecha para intentar averiguar lo que realmente ocurrió en el asesinato de su madre.
-                            Sin embargo, todo cambiará cuando sea alcanzado por un rayo. Después de estar nueve meses en coma, Barry Allen se despierta y ya no es el mismo. El rayo le ha dotado de una velocidad sobrenatural..</p>
+                        <p class="card-text">
+                            <h:outputText value="#{bundle_series.text2}"></h:outputText> 
+                        </p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"></li>
                             <li class="list-group-item">7 Temporadas - 133 Episodios</li>
@@ -116,7 +132,9 @@
                     <img src="img/imagen14.jpg" class="img-fluid card-img-top" alt="..."></img>
                     <div class="card-body">
                         <h2 class="card-title">Arrow</h2>
-                        <p class="card-text">Flecha Verde es un superhéroe que tiene un arco muy especial. Sus flechas no son normales, tienen pegamento, redes, gas lacrimógeno e incluso kryptonita para luchar contra sus enemigos.Oliver Queen, que desaparece en un naufrafio en una peligrosa isla al sur del Mar de China y que, a fuerza de sobrevivir, se convierte en un maestro arquero, de las artes marciales y del camuflaje.</p>
+                        <p class="card-text">
+                            <h:outputText value="#{bundle_series.text3}"></h:outputText> 
+                        </p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"></li>
                             <li class="list-group-item">8 Temporadas - 164 Episodios </li>
@@ -131,7 +149,9 @@
                     <img src="img/imagen15.jpg" class="img-fluid card-img-top" alt="..."></img>
                     <div class="card-body">
                         <h2 class="card-title">Cobra Kai</h2>
-                        <p class="card-text">Cobra Kai es la secuela de la famosa saga cinematográfica Karate Kid. La serie sigue la historia 30 años después del campeonato de 1984, Johnny no se encuentra en el mejor momento de su vida por lo que decide volver a abrir el famoso Dojo Cobra Kai para darle un giro. Es ahí cuando se reencuentra con Daniel, ahora convertido en un hombre de éxito.</p>
+                        <p class="card-text">
+                             <h:outputText value="#{bundle_series.text4}"></h:outputText> 
+                        </p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"></li>
                             <li class="list-group-item">2 Temporadas - 20 Episodios</li>
@@ -146,7 +166,9 @@
                     <img src="img/imagen16.jpg" class="img-fluid card-img-top" alt="..."></img>
                     <div class="card-body">
                         <h2 class="card-title">Daredevil</h2>
-                        <p class="card-text">'Daredevil' gira en torno a Matt Murdock, un abogado de día y superhéroe de noche. A pesar de ser ciego, posee un oído, un olfato, una fuerza y una agilidad increíblemente desarrolladas. Sin descanso, Matt Murdoch recorrerá las calles de Hell's Kitchen, en Nueva York, a la caza de todo tipo de criminales a los que no puede castigar un tribunal.</p>
+                        <p class="card-text">
+                            <h:outputText value="#{bundle_series.text5}"></h:outputText> 
+                        </p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"></li>
                             <li class="list-group-item">3 Temporadas - 39 Episodios</li>
