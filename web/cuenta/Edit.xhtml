@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditCuentaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_codcue}" for="codcue" />
+                    <h:inputText id="codcue" value="#{cuentaController.selected.codcue}" title="#{bundle.EditCuentaTitle_codcue}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_codcue}"/>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_salcue}" for="salcue" />
+                    <h:inputText id="salcue" value="#{cuentaController.selected.salcue}" title="#{bundle.EditCuentaTitle_salcue}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_salcue}"/>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_codusu}" for="codusu" />
+                    <h:selectOneMenu id="codusu" value="#{cuentaController.selected.codusu}" title="#{bundle.EditCuentaTitle_codusu}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_codusu}">
+                        <f:selectItems value="#{datosdeusuarioController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{cuentaController.update}" value="#{bundle.EditCuentaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditCuentaViewLink}"/>
+                <br />
+                <h:commandLink action="#{cuentaController.prepareList}" value="#{bundle.EditCuentaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditCuentaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

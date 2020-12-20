@@ -5,7 +5,6 @@
  */
 package modelo;
 
-import modelo.Datosdeusuario;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;
@@ -34,12 +33,6 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Generosdeserie.findByNomgen", query = "SELECT g FROM Generosdeserie g WHERE g.nomgen = :nomgen")
     , @NamedQuery(name = "Generosdeserie.findBySergen", query = "SELECT g FROM Generosdeserie g WHERE g.sergen = :sergen")})
 public class Generosdeserie implements Serializable {
-
-    @ManyToMany(mappedBy = "generosdeserieCollection")
-    private Collection<Datosdeusuario> datosdeusuarioCollection;
-
-    @ManyToMany(mappedBy = "generosdeserieCollection")
-    private Collection<Datosdeusuario> datosdeusuarioCollection;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -129,24 +122,6 @@ public class Generosdeserie implements Serializable {
     @Override
     public String toString() {
         return "modelo.Generosdeserie[ codgen=" + codgen + " ]";
-    }
-
-    @XmlTransient
-    public Collection<Datosdeusuario> getDatosdeusuarioCollection() {
-        return datosdeusuarioCollection;
-    }
-
-    public void setDatosdeusuarioCollection(Collection<Datosdeusuario> datosdeusuarioCollection) {
-        this.datosdeusuarioCollection = datosdeusuarioCollection;
-    }
-
-    @XmlTransient
-    public Collection<Datosdeusuario> getDatosdeusuarioCollection() {
-        return datosdeusuarioCollection;
-    }
-
-    public void setDatosdeusuarioCollection(Collection<Datosdeusuario> datosdeusuarioCollection) {
-        this.datosdeusuarioCollection = datosdeusuarioCollection;
     }
     
 }
