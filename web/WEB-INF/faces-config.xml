@@ -11,12 +11,12 @@
         </locale-config>
              
         <resource-bundle>
-            <base-name>/Bundle</base-name>
-            <var>bundle_index</var>
+            <base-name>/Bundle_inicio</base-name>
+            <var>bundle_inicio</var>
         </resource-bundle>
         
         <resource-bundle>
-            <base-name>/Bundle</base-name>
+            <base-name>/Bundle_series</base-name>
             <var>bundle_series</var>
         </resource-bundle>
     </application>

@@ -59,7 +59,7 @@
                 <h:form id="formLenguaje">
                             <div style="float: right">
                                 <h:outputText value="Idioma"/>
-                                <h:selectOneMenu value="#{bundle_index_es.card0}">
+                                <h:selectOneMenu onchange="submit()" value="#{usuaioBean.localidad}">
                                     <f:selectItem itemLabel="Español" itemValue="es"/>
                                     <f:selectItem itemLabel="Ingles" itemValue="en"/>
                                     <f:selectItem itemLabel="Frances" itemValue="fr"/>
