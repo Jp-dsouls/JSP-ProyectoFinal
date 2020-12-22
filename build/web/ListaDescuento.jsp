@@ -7,6 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Descuento</title>
+        <link rel="stylesheet" href="css/miestilo_tabla.css">
     </head>
     
     <body>
@@ -15,8 +16,8 @@
             CompraDAO obj= new CompraDAO();
         %>
         <form action="Consultar">
-        <table border="1">
-            
+            <table border="1" class="table">
+            <thead>
             <tr>
                 <td>Numero de compra</td>
                 <td>Codigo de usuario</td>
@@ -28,6 +29,7 @@
                 <td>Descuento</td>
                 <td>Pago final</td>
             </tr>
+            </thead>
                 <%
                     for (Consulta x : obj.compra()) {  
                 %>
